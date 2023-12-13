@@ -1,0 +1,26 @@
+//Starting with Alphabet and ending with Number
+package regularexpression;
+
+import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+public class Demo {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the String");
+        String pattern = "^[a-zA-z]+[0-9]+$";
+        String s = sc.nextLine();
+        Pattern p = Pattern.compile(pattern);
+        Matcher m = p.matcher(s);
+
+        if (m.matches()) {
+            System.out.println("Matched");
+        } else {
+            System.out.println("Not MAtched");
+        }
+        sc.close();
+    }
+
+}
