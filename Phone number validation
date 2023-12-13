@@ -1,0 +1,23 @@
+//Phone number Validation
+package regularexpression;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.Scanner;
+public class Demo2 {
+    
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the String");
+        String str=sc.nextLine();
+        String pattern="^[7-9][0-9]{9}$";
+        Pattern p=Pattern.compile(pattern);
+        Matcher m=p.matcher(str);
+        
+        if (m.matches()) {
+            System.out.println("Matched");
+        }
+        else
+            System.out.println("Not Matched");
+        sc.close();
+    }
+}
